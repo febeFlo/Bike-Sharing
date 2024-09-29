@@ -21,8 +21,8 @@ def get_total_registered_per_month(day_df):
     registered_df = day_df.groupby('mnth')['registered'].count()
     return registered_df
 
-day_df = pd.read_csv('dashboard\day.csv')
-hour_df = pd.read_csv('dashboard\hour.csv')
+day_df = pd.read_csv('day.csv')
+hour_df = pd.read_csv('hour.csv')
 
 datetime_columns = ['dteday']
 day_df.sort_values(by='dteday', inplace=True)
